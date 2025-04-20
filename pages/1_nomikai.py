@@ -30,13 +30,13 @@ st.markdown("""
             color: #2c3e50;
             margin-bottom: 1rem;
         }
-        .form-section-wrapper {
+        .form-section {
             background-color: #ffffff;
             padding: 1.5rem;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
             max-width: 600px;
-            margin: 1rem auto;
+            margin: auto;
         }
         .search-button button {
             background-color: #ff6f61;
@@ -63,6 +63,7 @@ st.markdown("""
             justify-content: space-between;
             height: 100%;
             transition: transform 0.2s ease;
+            margin-bottom: 1rem;
         }
         .result-card:hover {
             transform: translateY(-2px);
@@ -76,20 +77,77 @@ st.markdown("""
             border-radius: 8px !important;
             margin-bottom: 0.75rem;
         }
-        .shop-name {
+        .golf-name {
             font-size: 1.1rem;
             font-weight: 600;
             min-height: 3.5rem;
             margin: 0.5rem 0;
         }
+        .weather-button button {
+            background-color: #ff6f61 !important;
+            color: white !important;
+            font-weight: bold;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 14px;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+        .weather-button button:hover {
+            background-color: #e95c50 !important;
+        }
         @media screen and (max-width: 768px) {
-            .form-section-wrapper {
+            .form-section {
                 padding: 1rem;
                 margin: 0 0.5rem;
                 max-width: 100% !important;
             }
-            .shop-name {
+            .golf-name {
                 font-size: 1rem !important;
+            }
+        }
+        @media (prefers-color-scheme: dark) {
+            body, .main, .block-container {
+                background-color: #1e1e1e !important;
+                color: #f0f0f0 !important;
+            }
+            .form-section, .result-card {
+                background-color: #2c2c2c !important;
+                color: #f0f0f0 !important;
+                border-color: #444 !important;
+            }
+            .stTextInput > div > input,
+            .stDateInput input,
+            .stSelectbox div,
+            textarea {
+                background-color: #333 !important;
+                color: #f0f0f0 !important;
+                border-color: #666 !important;
+            }
+            .stButton button {
+                background-color: #ff6f61 !important;
+                color: white !important;
+            }
+            .stButton button:hover {
+                background-color: #e95c50 !important;
+            }
+            .title-text {
+                color: #ffffff !important;
+            }
+            [data-baseweb="select"] > div {
+                background-color: #333 !important;
+                color: #fff !important;
+                border-color: #666 !important;
+            }
+            [data-baseweb="select"] svg {
+                fill: #ffffff !important;
+            }
+            [data-baseweb="select"] .css-1dimb5e-singleValue,
+            [data-baseweb="select"] .css-1n6sfyn-ValueContainer {
+                background-color: transparent !important;
+                box-shadow: none !important;
+                border: none !important;
             }
         }
     </style>
